@@ -1,0 +1,198 @@
+/*------------*/
+/* Base Styles*/
+/*------------*/
+:root {
+    --color-primary: #29332C;
+    --color-secondary:#808080;
+    --color-tertiary:#F5F5F5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--color-tertiary);
+    margin: 0 1rem;     
+}
+
+/*--------------*/
+/* Header Styles*/
+/*--------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.main-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header input {
+    width: 250px;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    align-self: center;
+}
+
+/*--------------------*/
+/* Main Section Styles*/
+/*--------------------*/
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.modal-content{
+    background-color: white;
+    margin: 8% .5rem;
+    padding: 1.3rem 2rem;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2), 0 7px 20px 0 rgba(0,0,0, 0.17);
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.modal-content img {
+    border-radius: 50%;
+}
+
+.close-button{
+    float: right;
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    transition: 0.2s ease-out;
+}
+
+.close-button:hover,
+.close-button:focus {
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.left-arrow-btn {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: 2;
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-left: 0.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+.right-arrow-btn {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    z-index: 2;
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-right: 0.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+.right-arrow-btn:hover,
+.left-arrow-btn:hover,
+.right-arrow-btn:focus,
+.left-arrow-btn:focus {
+    color: var(--color-primary);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#line-break{
+    color: var(--color-primary)
+}
+
+.employee-sections {
+    margin: 0 0.5rem;
+}
+
+.card {
+   display: flex;
+    justify-content: center;
+    border: 1px solid var(--color-secondary);
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: .5rem;
+}
+
+.image-box img {
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.employee-info p {
+    font-size: 0.6rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*---------------*/
+/* Media Queries */
+/*---------------*/
+@media (min-width: 768px) {
+
+    header input {
+        width: 400px;
+    }
+
+    .employee-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 1rem;
+        width: 320px;
+        height: 150px;
+    }
+
+    .modal-content {
+        width: 35%;
+        margin: 8% auto;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        margin: 0.5rem;
+        padding: .5rem;
+        width: 305px;
+        transition: .30s ease-in;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+    
+}
